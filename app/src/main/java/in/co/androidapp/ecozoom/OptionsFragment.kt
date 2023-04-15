@@ -25,5 +25,7 @@ class OptionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.imageView.load(OptionsFragmentArgs.fromBundle(requireArguments()).imageUrl)
+
+
     }
 }

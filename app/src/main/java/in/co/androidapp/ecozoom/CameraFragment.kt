@@ -251,7 +251,7 @@ class CameraFragment : Fragment() {
             // Handle unsuccessful uploads
         }.addOnSuccessListener { taskSnapshot ->
             if (taskSnapshot.task.isSuccessful) {
-                val downloadUri = taskSnapshot.task.result
+                val downloadUri = taskSnapshot.task.result.uploadSessionUri
                 Log.d("Uplaod", downloadUri.toString())
 
                 findNavController().navigate(
