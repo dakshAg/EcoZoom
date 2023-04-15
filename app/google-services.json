@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "375226556055",
+    "project_id": "ecozoom-7a124",
+    "storage_bucket": "ecozoom-7a124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375226556055:android:e25a852c27b81dbfbd53d2",
+        "android_client_info": {
+          "package_name": "in.co.androidapp.ecozoom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375226556055-6dss09l06bu5pckecp6h8ciqidbbp837.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEfauJr3fwnK-0gAAyC5qursKhNTnzx3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375226556055-6dss09l06bu5pckecp6h8ciqidbbp837.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
