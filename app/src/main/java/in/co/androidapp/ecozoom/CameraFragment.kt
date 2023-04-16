@@ -78,6 +78,15 @@ class CameraFragment : Fragment() {
         // Set up the listeners for take photo and video capture buttons
         binding.fabSearchImage.setOnClickListener { takePhoto() }
 
+        binding.fabSearchText.setOnClickListener {
+            val sq = binding.inputSearch.text.toString()
+            findNavController().navigate(
+                CameraFragmentDirections.actionCameraFragmentToReportFragment(
+                    sq
+                )
+            )
+        }
+
         cameraExecutor = Executors.newSingleThreadExecutor()
     }
 
@@ -88,6 +97,10 @@ class CameraFragment : Fragment() {
     }
 
     private fun takePhoto() {
+
+        binding.consUploading.visibility = View.VISIBLE
+        binding.fabSearchImage.visibility = View.GONE
+
         Log.i(TAG, "takePhoto Called")
         // Get a stable reference of the modifiable image capture use case
         val imageCapture = imageCapture ?: return

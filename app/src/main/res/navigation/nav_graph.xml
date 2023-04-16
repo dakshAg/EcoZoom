@@ -28,19 +28,34 @@
     <fragment
         android:id="@+id/cameraFragment"
         android:name="in.co.androidapp.ecozoom.CameraFragment"
-        android:label="fragment_camera"
+        android:label="EcoZoom"
         tools:layout="@layout/fragment_camera" >
         <action
             android:id="@+id/action_cameraFragment_to_optionsFragment"
             app:destination="@id/optionsFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
     </fragment>
     <fragment
         android:id="@+id/optionsFragment"
         android:name="in.co.androidapp.ecozoom.OptionsFragment"
-        android:label="fragment_options"
+        android:label="EcoZoom"
         tools:layout="@layout/fragment_options" >
         <argument
             android:name="imageUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_optionsFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="in.co.androidapp.ecozoom.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" >
+        <argument
+            android:name="query"
             app:argType="string" />
     </fragment>
 </navigation>

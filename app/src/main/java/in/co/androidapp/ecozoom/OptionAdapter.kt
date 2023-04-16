@@ -5,10 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 
-class OptionAdapter(private val listt: ArrayList<Option>) :
+class OptionAdapter(private val listt: List<Option>, val navController: NavController) :
     RecyclerView.Adapter<OptionAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -23,7 +24,14 @@ class OptionAdapter(private val listt: ArrayList<Option>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val current = listt[position]
-        holder.img.load(current.url)
+        holder.img.load(current.image)
+        holder.img.setOnClickListener {
+            navController.navigate(
+                OptionsFragmentDirections.actionOptionsFragmentToReportFragment(
+                    current.product
+                )
+            )
+        }
     }
 
     override fun getItemCount(): Int {
